@@ -16,4 +16,15 @@ __3. 处理可能的冲突__
 git add 冲突文件
 git rebase --continue
 ```
-## push 当前分支到 remote 的分支上
+## push 当前分支 a 到云端的 Fork 的分支 b 上
+__1. 确保本地当前分支是想推送的分支 a__
+```
+git checkout a
+```
+__2. 推送到云端的 Fork 的分支 b 上__
+```
+git push Fork a:b
+```
+Fork 是我要推送到的远程仓库别名
+
+a:b 表示“把本地的 a 分支推送到远程 Fork 的 b 分支”
