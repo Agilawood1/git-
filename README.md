@@ -28,3 +28,20 @@ git push Fork a:b
 Fork 是我要推送到的远程仓库别名
 
 a:b 表示“把本地的 a 分支推送到远程 Fork 的 b 分支”
+
+## merge 与 rebase
+- `merge`
+将两个分支合并，包括各自的历史
+
+
+- `rebase`
+  
+示例：
+```
+git checkout a
+git rebase origin/main
+```
+改变分支基点。将当前分支 a 的所有提交摘下来，移动到目标分支 origin/main 的最新提交之后，相当于把我的开发过程直接接在别人工作之后
+- 注
+
+当开发新分支 a 时，主分支 main 上有新改动，当前分支需要用到时，用rebase；当主分支合并其他开发分支功能时，用merge。公共分支上一定不要用rebase，因为这会改写历史，导致其他队友的代码与远程仓库完全脱节，造成严重的同步混乱。
