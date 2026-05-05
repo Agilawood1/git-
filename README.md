@@ -160,3 +160,7 @@ git stash save "这是我本次的……stash"
 
 ## 版本回退
 推荐使用`checkout`。在想要回退的版本处 checkout 一个新分支重新开发
+
+## 拣选提交
+如果仅想要分支的某次提交代码，使用`git cherry-pick <commit-id>`
+不想要的提交不会被挑选进来。
